@@ -23,7 +23,7 @@
 ! type name;comment
 
 
-#define TS_SIGNATURE "rusEFI v1.2020.4"
+#define TS_SIGNATURE "rusEFI v1.2020.5"
 
 !
 ! this is here so that rusEfi console can access it, too
@@ -36,7 +36,7 @@
 ! so not forget to change fileVersion in rusefi.ini
 ! todo: this not needed in light of TS_SIGNATURE but rusEFI console still uses it. Need to migrate
 ! rusEFI console from TS_FILE_VERSION to TS_SIGNATURE :(
-#define TS_FILE_VERSION 20200310
+#define TS_FILE_VERSION 20200522
 
 
 ! This is the version of the data stored in flash configuration
