@@ -456,6 +456,12 @@ public class FunctionalTest extends RusefiTestBase {
         assertWaveNull("hard limit check", chart, EngineChart.INJECTOR_1);
     }
 
+    @Test
+    public void testButtonDebounce() {
+        ecu.sendCommand("set debug_mode 37");
+
+    }
+
     /**
      * This method waits for longer then usual.
      */
