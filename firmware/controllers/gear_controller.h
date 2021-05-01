@@ -16,13 +16,14 @@ public:
     virtual void init(DECLARE_ENGINE_PARAMETER_SIGNATURE);
 private:
     gear_e desiredGear = NEUTRAL;
-    adc_channel_e getAnalogInputPin;
-    brain_pin_e getDigitalInputPin;
+protected:
+    adc_channel_e getAnalogInputPin(int);
+    brain_pin_e* getDigitalInputPin(int);
+    pin_input_mode_e* getDigitalInputPinMode(int);
     int getInputRoleD();
     int getInputRoleA();
-    bool tcuDigitalInputs[TCU_INPUT_COUNT];
-    float tcuAnalogInputs[TCU_INPUT_COUNT];
-protected:
+    ButtonDebounce tcuDigitalInputs[TCU_INPUT_COUNT];
+    adc_channel_e tcuAnalogInputs[TCU_INPUT_COUNT];
     gear_e setDesiredGear(gear_e);
 
 private:
