@@ -998,9 +998,9 @@ typedef enum __attribute__ ((__packed__)) {
 	ROLE_DRIVE = 4,
 	ROLE_MANUAL = 5,
 	ROLE_LOW = 6,
-	ROLE_GEAR_3 = 9,
-	ROLE_GEAR_2 = 10,
-	ROLE_GEAR_1 = 11,
+	ROLE_GEAR_3 = 7,
+	ROLE_GEAR_2 = 8,
+	ROLE_GEAR_1 = 9,
 } tcu_role_e;
 
 typedef enum __attribute__ ((__packed__)) {
