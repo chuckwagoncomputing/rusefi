@@ -2385,6 +2385,8 @@ cmd_set_engine_type_default					= "@@TS_IO_TEST_COMMAND_char@@\x00\x31\x00\x00"
 		field = "AUX Serial RX", 						auxSerialRxPin
 		field = "External Knock",						externalKnockSenseAdc
 		field = "Start/Stop Button",					startStopButtonPin
+		field = "Upshift Pin",							tcuUpshiftButtonPin
+		field = "Downshift Pin",						tcuDownshiftButtonPin
 		field = "TCU Input Pin 1",						tcuInputPin1
 		field = "TCU Input Pin 2",						tcuInputPin2
 		field = "TCU Input Pin 3",						tcuInputPin3
@@ -3284,6 +3286,12 @@ cmd_set_engine_type_default					= "@@TS_IO_TEST_COMMAND_char@@\x00\x31\x00\x00"
 		field = "Solenoid 6 Pin"	tcu_solenoid6,		{ tcuEnabled }
 		field = "Solenoid 6 Pin Mode"	tcu_solenoid_mode6,	{ tcuEnabled }
 
+	dialog = buttonShiftInputPanel, "Switch/Button Shift"
+		field = "Upshift Pin"		tcuUpshiftButtonPin,		{ tcuEnabled }
+		field = "Upshift Pin Mode"	tcuUpshiftButtonPinMode,	{ tcuEnabled }
+		field = "Downshift Pin"		tcuDownshiftButtonPin,		{ tcuEnabled }
+		field = "Downshift Pin Mode"	tcuDownshiftButtonPinMode,	{ tcuEnabled }
+
 	dialog = tcuInputPanel, "Range/Gear Selection Inputs"
 		field = "Input Mode"		tcuInputMode,			{ tcuEnabled }
 		field = "Input Pin 1"		tcuInputPin1D,			{ tcuEnabled && tcuInputMode }
@@ -3318,6 +3326,7 @@ cmd_set_engine_type_default					= "@@TS_IO_TEST_COMMAND_char@@\x00\x31\x00\x00"
 	dialog = tcuControls, "Transmission Settings"
 		panel = transmissionPanel
 		panel = solenoidPanel
+		panel = buttonShiftInputPanel
 		panel = tcuInputPanel
 		panel = tcuInputStatePanel
 

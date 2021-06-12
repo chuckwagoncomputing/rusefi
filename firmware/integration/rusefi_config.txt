@@ -1052,7 +1052,7 @@ custom maf_sensor_type_e 4 bits, S32, @OFFSET@, [0:1], @@maf_sensor_type_e_enum@
 
 	output_pin_e[LUA_PWM_COUNT iterate] luaOutputPins
 
-	#define tcu_role_e_enum "Park", "Neutral" , "Park/Neutral", "Reverse", "Drive", "Manual", "Low", "Upshift", "Downshift", "3", "2", "1"
+	#define tcu_role_e_enum "Park", "Neutral" , "Park/Neutral", "Reverse", "Drive", "Manual", "Low", "3", "2", "1"
 	custom tcu_role_e 1 bits, U08, @OFFSET@, [0:3], @@tcu_role_e_enum@@
 	tcu_role_e	tcuState0Role;
 	tcu_role_e	tcuState1Role;
@@ -1244,8 +1244,9 @@ int16_t tps2Max;Full throttle#2. tpsMax value as 10 bit ADC value. Not Voltage!\
 	brain_pin_e binarySerialRxPin;	
 	
 	brain_pin_e[AUX_DIGITAL_VALVE_COUNT iterate] auxValves
-	int8_t[2] unused1206;;"units", 1, 0, -20, 100, 0
 
+	switch_input_pin_e tcuUpshiftButtonPin
+	switch_input_pin_e tcuDownshiftButtonPin
 
 	float[ENGINE_NOISE_CURVE_SIZE] knockNoise;Knock sensor output knock detection threshold depending on current RPM;"v",      1,     0,   0.0,    10,   2
 	float[ENGINE_NOISE_CURVE_SIZE] knockNoiseRpmBins;;"RPM",      1,     0,   0.0,    18000,   2
@@ -1545,7 +1546,8 @@ tChargeMode_e tChargeMode;
 	uint16_t mc33_t_hold_off;;"us",   1,   0.0,        0,  10000,   0
 	uint16_t mc33_t_hold_tot;;"us",   1,   0.0,        0,  10000,   0
 
-        int8_t[2] unused1551;;"units", 1, 0, -20, 100, 0;
+	pin_input_mode_e tcuUpshiftButtonPinMode
+	pin_input_mode_e tcuDownshiftButtonPinMode
 
 	pin_input_mode_e acSwitchMode
 
