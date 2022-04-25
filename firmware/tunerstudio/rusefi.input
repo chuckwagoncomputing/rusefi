@@ -205,6 +205,9 @@ enable2ndByteCanID = false
     gearCountArray = array, S08, [@@TCU_GEAR_COUNT@@], "Gear", 1, 0, -1, { @@TCU_GEAR_COUNT@@ - 2 }, 0, noMsqSave
     solenoidCountArray = array, U08, [@@TCU_SOLENOID_COUNT@@], "Solenoid", 1, 0, 1, @@TCU_SOLENOID_COUNT@@, 0, noMsqSave
 
+		rangeInputArray = array, U08, [6], "Input", 1, 0, 0, 6, 0, noMsqSave
+		rangeStateArray = array, U08, [9], "State", 1, 0, 0, 9, 0, noMsqSave
+
 ; These are inverted (false = "Yes") so that they default to enabled
 	enableLogDebugChannels = bits, U08, [0:0], "Yes", "No"
 	enableLogErrorList = bits, U08, [0:0], "Yes", "No"
@@ -302,6 +305,10 @@ enable2ndByteCanID = false
 	defaultValue = solenoidCountArray, 1 2 3 4 5 6 7 8
 	readOnly = solenoidCountArray
 
+	defaultValue = rangeStateArray, 0 1 2 3 4 5 6 7 8
+	readOnly = rangeStateArray
+	defaultValue = rangeInputArray, 0 1 2 3 4 5
+	readOnly = solenoidCountArray
 
 [CurveEditor]
 ;	xAxis       =  leftValue, rightValue, step
@@ -699,6 +706,30 @@ curve = 32Curve, "3-2 Shift Solenoid Percent by Speed"
 		xBins = tcu_32SpeedBins, vehicleSpeedKph
 		yBins = tcu_32Vals
 
+curve = rangeMatrix, "Range Switch Input Matrix"
+    columnLabel = "Pin", ""
+    xAxis = 0, 6, 6
+    yAxis = 0, 3, 3
+    xBins = rangeInputArray
+		yBins = tcu_rangeP
+		yBins = tcu_rangeR
+		yBins = tcu_rangeN
+		yBins = tcu_rangeD
+		yBins = tcu_rangeM3
+		yBins = tcu_rangeM2
+		yBins = tcu_rangeM1
+		yBins = tcu_rangePlus
+		yBins = tcu_rangeMinus
+		lineLabel = "Park"
+		lineLabel = "Reverse"
+		lineLabel = "Neutral"
+		lineLabel = "Drive"
+		lineLabel = "Manual 3rd"
+		lineLabel = "Manual 2nd"
+		lineLabel = "Manual 1st"
+		lineLabel = "Manual +"
+		lineLabel = "Manual -"
+
 [TableEditor]
    ;       table_id,    map3d_id,    "title",      page
 
@@ -999,7 +1030,7 @@ curve = 32Curve, "3-2 Shift Solenoid Percent by Speed"
 		xyLabels = "RPM", ""
 		xBins = gppwm4_rpmBins, RPMValue
 		yBins = gppwm4_loadBins, gppwm4_load
-		zBins = gppwm4_table
+ 		zBins = gppwm4_table
 
 	table = tcuSolenoidTableTbl,  tcuSolenoidTableMap,  "Solenoids Active By Gear",   1
 		xBins		= solenoidCountArray, tcuCurrentGear
@@ -1016,7 +1047,6 @@ curve = 32Curve, "3-2 Shift Solenoid Percent by Speed"
         xBins     = hpfpCompensationRpmBins, RPMValue
         yBins     = hpfpCompensationLoadBins, fuelRunning
         zBins     = hpfpCompensation
-
 
 [GaugeConfigurations]
 
@@ -1570,6 +1600,7 @@ menuDialog = main
 		subMenu = pcPerGearDialog, "Line Pressure Per Gear"
 		subMenu = pcPerShiftDialog, "Line Pressure Per Shift"
 		subMenu = 32Dialog, "3-2 Shift Solenoid Percent by Speed"
+		subMenu = rangeMatrixDialog, "Range Selector Input Matrix"
 
 	menu = "&Sensors"
 		# Base analog input settings
@@ -3501,6 +3532,16 @@ cmd_set_engine_type_default					= "@@TS_IO_TEST_COMMAND_char@@\x00\x31\x00\x00"
 		field = "Filter parameter",		issFilterReciprocal, { tcuInputSpeedSensorPin != @@ADC_CHANNEL_NONE@@ }
 		field = "Tooth Count", tcuInputSpeedSensorTeeth
 
+	dialog = rangeMatrixInputPanel, "Range Selector Inputs"
+		field = "Input 1 Pin", tcu_rangeInput1, { tcuEnabled }
+		field = "Input 1 Pin Mode", tcu_rangeInputMode1, { tcuEnabled }
+		field = "Input 2 Pin", tcu_rangeInput2, { tcuEnabled }
+		field = "Input 2 Pin Mode", tcu_rangeInputMode2, { tcuEnabled }
+		field = "Input 3 Pin", tcu_rangeInput3, { tcuEnabled }
+		field = "Input 3 Pin Mode", tcu_rangeInputMode3, { tcuEnabled }
+		field = "Input 4 Pin", tcu_rangeInput4, { tcuEnabled }
+		field = "Input 4 Pin Mode", tcu_rangeInputMode4, { tcuEnabled }
+
 dialog = tcuControls, "Transmission Settings"
 		panel = transmissionPanel
 		panel = shiftSolenoidPanel
@@ -3508,6 +3549,7 @@ dialog = tcuControls, "Transmission Settings"
 
 	dialog = gearControls, "Gear Selection Settings"
 		panel = buttonShiftInputPanel
+		panel = rangeMatrixInputPanel
 
 	dialog = inputSpeedSensor, "Input Speed Sensor"
 		panel = inputSpeedSensorPanel
@@ -3523,6 +3565,9 @@ dialog = tcuControls, "Transmission Settings"
 
 	dialog = 32Dialog, "3-2 Shift Solenoid Percent by Speed"
 		panel = 32Curve
+
+	dialog = rangeMatrixDialog, "Range Selector Input Matrix"
+		panel = rangeMatrix
 
 ;Boost Open Loop
 
