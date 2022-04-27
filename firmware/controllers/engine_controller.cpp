@@ -53,6 +53,7 @@
 #include "start_stop.h"
 #include "dynoview.h"
 #include "vr_pwm.h"
+#include "gc_generic.h"
 
 #if EFI_SENSOR_CHART
 #include "sensor_chart.h"

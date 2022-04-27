@@ -65,6 +65,7 @@ CONTROLLERS_SRC_CPP = \
 	$(CONTROLLERS_DIR)/simple_tcu.cpp \
 	$(CONTROLLERS_DIR)/tc_4l6x.cpp \
 	$(CONTROLLERS_DIR)/limp_manager.cpp \
+	$(CONTROLLERS_DIR)/gc_generic.cpp \
 
 CONTROLLERS_INC=\
 	$(CONTROLLERS_DIR) \

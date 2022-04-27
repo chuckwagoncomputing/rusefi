@@ -40,6 +40,7 @@
 #include "gear_detector.h"
 #include "advance_map.h"
 #include "fan_control.h"
+#include "gc_generic.h"
 
 #ifndef EFI_UNIT_TEST
 #error EFI_UNIT_TEST must be defined!
