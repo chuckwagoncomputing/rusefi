@@ -59,13 +59,41 @@ void GenericGearController::update() {
 		case SelectedGear::Neutral :
 			setDesiredGear(NEUTRAL);
 			break;
+		case SelectedGear::ManualPlus :
+			switch (getDesiredGear()) {
+			case GEAR_1 :
+				setDesiredGear(GEAR_2);
+				break;
+			case GEAR_2 :
+				setDesiredGear(GEAR_3);
+				break;
+			case GEAR_3 :
+				setDesiredGear(GEAR_4);
+				break;
+			default:
+				break;
+			}
+			break;
+		case SelectedGear::ManualMinus :
+			switch (getDesiredGear()) {
+			case GEAR_2 :
+				setDesiredGear(GEAR_1);
+				break;
+			case GEAR_3 :
+				setDesiredGear(GEAR_2);
+				break;
+			case GEAR_4 :
+				setDesiredGear(GEAR_3);
+				break;
+			default:
+				break;
+			}
+			break;
 		default:
 			break;
 		}
 		// TODO
-		//  inc/dec gear_e for Minus, Plus
-		//    kinda like button shift does, but only for gears 1-X, no PRN
-		//  for D, need shift tables etc.
+		//  for Drive, need shift tables etc.
 	}
 
 	GearControllerBase::update();
