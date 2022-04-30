@@ -22,38 +22,7 @@ void GenericGearController::update() {
 	SelectedGear gear = SelectedGear::Invalid;
 	// 1-9 because 0 is SelectedGear::Invalid
 	for (int i = 1; i <= 9; i++) {
-		uint8_t *rangeStates;
-		switch (i) {
-		case 1 :
-			rangeStates = config->tcu_rangePlus;
-			break;
-		case 2 :
-			rangeStates = config->tcu_rangeMinus;
-			break;
-		case 3 :
-			rangeStates = config->tcu_rangeP;
-			break;
-		case 4 :
-			rangeStates = config->tcu_rangeR;
-			break;
-		case 5 :
-			rangeStates = config->tcu_rangeN;
-			break;
-		case 6 :
-			rangeStates = config->tcu_rangeD;
-			break;
-		case 7 :
-			rangeStates = config->tcu_rangeM3;
-			break;
-		case 8 :
-			rangeStates = config->tcu_rangeM2;
-			break;
-		case 9 :
-			rangeStates = config->tcu_rangeM1;
-			break;
-		default:
-			return;
-		}
+		uint8_t *rangeStates = getRangeStateArray(i);
 		for (int p = 0; p < efi::size(engineConfiguration->tcu_rangeInput); p++) {
 			int cellState = rangeStates[p];
 			if (!isBrainPinValid(engineConfiguration->tcu_rangeInput[p]) || cellState == 3) {
