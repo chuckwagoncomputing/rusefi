@@ -73,8 +73,27 @@ void GenericGearController::update() {
 		}
 	}
 	if (gear != SelectedGear::Invalid) {
-		// TODO do something with the range we're in
-		//  set gear_e to match gear for P,R,N,M3,M2,M1
+		switch (gear) {
+		case SelectedGear::Manual3 :
+			setDesiredGear(GEAR_3);
+			break;
+		case SelectedGear::Manual2 :
+			setDesiredGear(GEAR_2);
+			break;
+		case SelectedGear::Manual1 :
+			setDesiredGear(GEAR_1);
+			break;
+		case SelectedGear::Reverse :
+			setDesiredGear(REVERSE);
+			break;
+		case SelectedGear::Park :
+		case SelectedGear::Neutral :
+			setDesiredGear(NEUTRAL);
+			break;
+		default:
+			break;
+		}
+		// TODO
 		//  inc/dec gear_e for Minus, Plus
 		//    kinda like button shift does, but only for gears 1-X, no PRN
 		//  for D, need shift tables etc.
