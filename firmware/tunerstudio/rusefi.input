@@ -720,6 +720,7 @@ curve = rangeMatrix, "Range Switch Input Matrix"
 		yBins = tcu_rangeM1
 		yBins = tcu_rangePlus
 		yBins = tcu_rangeMinus
+		yBins = tcu_rangeLow
 		lineLabel = "Park"
 		lineLabel = "Reverse"
 		lineLabel = "Neutral"
@@ -729,6 +730,7 @@ curve = rangeMatrix, "Range Switch Input Matrix"
 		lineLabel = "Manual 1st"
 		lineLabel = "Manual +"
 		lineLabel = "Manual -"
+		lineLabel = "Low"
 
 [TableEditor]
    ;       table_id,    map3d_id,    "title",      page

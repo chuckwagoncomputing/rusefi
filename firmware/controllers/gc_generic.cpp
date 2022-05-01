@@ -89,11 +89,13 @@ void GenericGearController::update() {
 				break;
 			}
 			break;
+		case SelectedGear::Drive :
+			// TODO
+			//  for Drive, need shift tables etc.
+			break;
 		default:
 			break;
 		}
-		// TODO
-		//  for Drive, need shift tables etc.
 	}
 
 	GearControllerBase::update();

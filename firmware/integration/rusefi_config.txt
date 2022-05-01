@@ -1720,7 +1720,7 @@ uint8_t[8] tcu_tccUnlockSpeed;;"MPH", 1, 0, 0, 255, 0
 
 uint8_t[8] tcu_32SpeedBins;;"KPH", 1, 0, 0, 255, 0
 uint8_t[8] tcu_32Vals;;"%", 1, 0, 0, 255, 0
-	
+
 uint8_t[6] tcu_rangeP;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeR;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeN;;"level", 1, 0, 0, 3, 0
@@ -1730,6 +1730,7 @@ uint8_t[6] tcu_rangeM2;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeM1;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangePlus;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeMinus;;"level", 1, 0, 0, 3, 0
+uint8_t[6] tcu_rangeLow;;"level", 1, 0, 0, 3, 0
 
 end_struct
 
