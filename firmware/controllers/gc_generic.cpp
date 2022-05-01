@@ -10,7 +10,7 @@ GenericGearController::GenericGearController() {
 
 void GenericGearController::init() {
 	for (int i = 0; i < efi::size(engineConfiguration->tcu_rangeInput); i++) {
-		if (engineConfiguration->tcu_rangeInput[i] != GPIO_UNASSIGNED) {
+		if (isBrainPinValid(engineConfiguration->tcu_rangeInput[i])) {
 			efiSetPadMode("Range Input", engineConfiguration->tcu_rangeInput[i], getInputMode(engineConfiguration->tcu_rangeInputMode[i]));
 		}
 	}
