@@ -105,7 +105,6 @@ void Gm4l6xTransmissionController::setPcState(gear_e gear) {
 	case REVERSE:
 		pcts = &config->tcu_pcValsR;
 		break;
-	case PARK:
 	case NEUTRAL:
 		pcts = &config->tcu_pcValsN;
 		break;

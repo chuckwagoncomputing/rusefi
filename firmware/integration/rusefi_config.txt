@@ -1725,6 +1725,7 @@ uint8_t[6] tcu_rangeP;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeR;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeN;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeD;;"level", 1, 0, 0, 3, 0
+uint8_t[6] tcu_rangeM;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeM3;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeM2;;"level", 1, 0, 0, 3, 0
 uint8_t[6] tcu_rangeM1;;"level", 1, 0, 0, 3, 0

@@ -86,13 +86,19 @@ uint8_t* GearControllerBase::getRangeStateArray(int i) {
 		return config->tcu_rangeD;
 		break;
 	case 7 :
-		return config->tcu_rangeM3;
+		return config->tcu_rangeM;
 		break;
 	case 8 :
-		return config->tcu_rangeM2;
+		return config->tcu_rangeM3;
 		break;
 	case 9 :
+		return config->tcu_rangeM2;
+		break;
+	case 10 :
 		return config->tcu_rangeM1;
+		break;
+	case 11 :
+		return config->tcu_rangeLow;
 		break;
 	default:
 		return NULL;
