@@ -1514,7 +1514,7 @@ float etbMinimumPosition;;"%", 1, 0, 0.01, 100, 2
 switch_input_pin_e[RANGE_INPUT_COUNT iterate] tcu_rangeInput;
 pin_input_mode_e[RANGE_INPUT_COUNT iterate] tcu_rangeInputMode;
 
-uint8_t[234] mainUnusedEnd;;"units", 1, 0, 0, 1, 0
+uint8_t[230] mainUnusedEnd;;"units", 1, 0, 0, 1, 0
 
 ! end of engine_configuration_s
 end_struct
