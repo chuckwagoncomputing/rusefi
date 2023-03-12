@@ -5589,7 +5589,7 @@
   (gr_text "39" (at 99.843 52.447) (layer "F.SilkS") (tstamp e18b0e3d-e7fa-48d7-a6b3-560a8331ea7f)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "rusefi.com    Rev. 0.3 foo" (at 159.406 54.352 270) (layer "F.SilkS") (tstamp e3fb0910-36cc-479e-8622-50f90b89a2bd)
+  (gr_text "rusefi.com    Rev. 0.3 foobar" (at 159.406 54.352 270) (layer "F.SilkS") (tstamp e3fb0910-36cc-479e-8622-50f90b89a2bd)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text "40" (at 86.381 52.574) (layer "F.SilkS") (tstamp ea9cab22-2282-41f9-a11c-634957b59044)
