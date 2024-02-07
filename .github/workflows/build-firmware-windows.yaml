@@ -6,10 +6,6 @@ jobs:
   build:
     runs-on: windows-2019
 
-
-
-
-
     steps:
       - uses: actions/setup-java@v4
         with:
@@ -35,15 +31,8 @@ jobs:
           git submodule update --init --depth=1 java_console/luaformatter
           git submodule update --init --depth=1 java_console/peak-can-basic
 
-      - name: Set up MinGW
-        uses: egor-tensin/setup-mingw@v2
-        # 12 has pch https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105858
-        # 13 has x86 issue https://github.com/egor-tensin/setup-mingw/issues/14
-        with:
-          version: 8.1.0
-
-
-
+      - name: Set up Cygwin
+        uses: cygwin/cygwin-install-action@master
 
       - name: Print bash version
         working-directory: .
@@ -52,9 +41,9 @@ jobs:
       - name: Test Java Compiler
         run: javac -version
 
-      - name: Generate Configs, Enums & Live Documentation
+      - name: Generate Enums & Live Documentation
         working-directory: ./firmware/
-        run: bash gen_default_everything.sh
+        run: bash gen_live_documentation.sh
 
       - name: Print arm GCC version
         working-directory: .
