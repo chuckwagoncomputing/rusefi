@@ -46,10 +46,12 @@ endif
 
 CONSOLE_OUT = ../java_console_binary/rusefi_console.jar
 AUTOUPDATE_OUT = ../java_console_binary/rusefi_autoupdate.jar
+TPL_OUT = ../java_tools/ts_plugin_launcher/build/jar/rusefi_ts_plugin_launcher.jar
 
 UPDATE_CONSOLE_FOLDER_SOURCES = \
-  $(CONSOLE_OUT) \
-  $(AUTOUPDATE_OUT)
+	$(CONSOLE_OUT) \
+  $(AUTOUPDATE_OUT) #\
+#  $(TPL_OUT)
 
 CONSOLE_FOLDER_SOURCES = \
   ../misc/console_launcher/rusefi_autoupdate.exe \
@@ -112,6 +114,9 @@ BUNDLE_FILES = \
 #
 
 FLOCK = flock /tmp/java.lock
+
+$(TPL_OUT):
+	cd ../java_tools && $(FLOCK) ./gradlew :ts_plugin_launcher:shadowJar
 
 $(CONSOLE_OUT):
 	cd ../java_tools && $(FLOCK) ./gradlew :ui:shadowJar
