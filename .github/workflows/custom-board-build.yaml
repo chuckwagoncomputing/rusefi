@@ -133,6 +133,14 @@ jobs:
             echo Not a repository
           fi
 
+      - name: Build console
+        working-directory: ${{inputs.rusefi_dir}}
+        run: bash misc/jenkins/build_java_console.sh
+
+      - name: Build Firmware
+        working-directory: ${{inputs.rusefi_dir}}/firmware
+        run: bash bin/compile.sh -b ${{ env.BOARD_META_PATH }} deliver/rusefi.bin
+
       - name: Push Config
         run: |
           git config --local user.email "action@github.com"

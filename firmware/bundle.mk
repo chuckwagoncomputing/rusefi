@@ -24,6 +24,16 @@ endif
 
 INI_FILE = $(META_OUTPUT_ROOT_FOLDER)tunerstudio/generated/rusefi_$(SHORT_BOARD_NAME).ini
 
+CONFIG_FILES = \
+  $(INI_FILE) \
+  controllers/generated/$(PROJECT)_generated_$(SHORT_BOARD_NAME).h \
+  controllers/generated/signature_$(SHORT_BOARD_NAME).h \
+  hw_layer/mass_storage/ramdisk_image.h \
+  hw_layer/mass_storage/ramdisk_image_compressed.h \
+  ../java_console/models/src/main/java/com/rusefi/config/generated/Fields.java \
+  $(BOARD_DIR)/connectors/generated_outputs.h \
+  $(BOARD_DIR)/connectors/generated_ts_name_by_pin.cpp
+
 DELIVER = deliver
 ARTIFACTS = ../artifacts
 
@@ -107,6 +117,18 @@ BUNDLE_FILES = \
   $(ST_DRIVERS) \
   $(FOLDER_TARGETS) \
   $(CONSOLE_FOLDER_TARGETS)
+
+$(OBJS): $(CONFIG_FILES)
+$(PCHOBJ): $(CONFIG_FILES)
+
+.FORCE:
+
+$(CONFIG_FILES) &: .FORCE
+ifneq (,$(CUSTOM_GEN_CONFIG))
+	bash $(BOARD_DIR)/$(CUSTOM_GEN_CONFIG)
+else
+	bash gen_config_board.sh
+endif
 
 #
 # problem statement: 'make -j4' could easily attempt to run parallel gradle processes. gradle does not seem to like it
