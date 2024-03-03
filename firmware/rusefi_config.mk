@@ -1,5 +1,3 @@
-include $(PROJECT_DIR)/../java_tools/java_tools.mk
-
 # We're assuming that META_OUTPUT_ROOT_FOLDER is a path relative to PROJECT_DIR
 INI_FILE = $(PROJECT_DIR)/$(META_OUTPUT_ROOT_FOLDER)tunerstudio/generated/rusefi_$(SHORT_BOARD_NAME).ini
 SIG_FILE = $(PROJECT_DIR)/tunerstudio/generated/signature_$(SHORT_BOARD_NAME).txt
