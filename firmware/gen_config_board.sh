@@ -41,7 +41,7 @@ source gen_config_common.sh
 echo "Using COMMON_GEN_CONFIG [$COMMON_GEN_CONFIG]"
 
 # in rare cases order of arguments is important - '-tool' should be specified before '-definition'
-java \
+flock /tmp/java.lock java \
  $COMMON_GEN_CONFIG_PREFIX \
  	-tool gen_config.sh \
  $COMMON_GEN_CONFIG \

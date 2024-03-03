@@ -11,3 +11,5 @@ $(TGT_SENTINEL): .FORCE
 	echo $(SHORT_BOARD_NAME) >$@; fi
 
 .FORCE:
+
+$(OBJS): $(TGT_SENTINEL)

@@ -32,10 +32,6 @@ jobs:
           sudo bash misc/actions/add-ubuntu-latest-apt-mirrors.sh
           sudo apt-get install sshpass mtools
 
-      - name: Generate Enums & Live Documentation
-        working-directory: ./firmware/
-        run: ./gen_live_documentation.sh
-
       - name: Print GCC version
         run: gcc -v
 
@@ -89,7 +85,7 @@ jobs:
       # this job focuses of tool validation so we do not push fresh enums here
       - name: Generate Enums using freshly compiled tool
         working-directory: ./firmware/
-        run: ./gen_enum_to_string.sh
+        run: make -j$(nproc) docs-enums
 
       - name: Upload rusEFI server
         working-directory: .

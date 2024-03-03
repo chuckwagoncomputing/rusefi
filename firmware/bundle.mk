@@ -1,3 +1,5 @@
+include docs_enums.mk
+
 # Use SHORT_BOARD_NAME for BUNDLE_NAME if it's empty.
 # BUNDLE_NAME is usually more specific - it points to a variant of a board.
 ifeq (,$(BUNDLE_NAME))

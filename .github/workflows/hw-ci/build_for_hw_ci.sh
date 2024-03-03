@@ -16,7 +16,7 @@ cd firmware
 export BOARD_META_PATH=$(bash bin/find_meta_info.sh ${HW_FOLDER} ${HW_TARGET})
 source config/boards/common_script_read_meta_env.inc "${BOARD_META_PATH}"
 
-bash gen_live_documentation.sh
+make -j$(nproc) -r docs-enums
 bash gen_signature.sh $HW_TARGET
 bash gen_config_board.sh $HW_FOLDER $HW_TARGET
 bash bin/gen_image_board.sh $HW_FOLDER $HW_TARGET

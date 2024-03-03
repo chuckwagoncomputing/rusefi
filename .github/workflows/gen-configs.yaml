@@ -40,7 +40,7 @@ jobs:
 
     - name: Generate Live Documentation
       working-directory: ./firmware/
-      run: ./gen_live_documentation.sh
+      run: make -j$(nproc) -r docs-enums
 
     - name: Generate All Configs
       working-directory: ./firmware/
