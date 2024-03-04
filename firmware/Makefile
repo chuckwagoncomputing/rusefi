@@ -396,6 +396,15 @@ include rusefi_pch.mk
 
 include bundle.mk
 
+CHIBIOS_FILE=$(CHIBIOS)/os/readme.txt
+CHIBIOS_CONTRIB_FILE=$(CHIBIOS_CONTRIB)/os/hal/hal.mk
+$(CHIBIOS_CONTRIB_FILE) $(CHIBIOS_FILE): .submodule-sentinel ;
+
+.submodule-sentinel:
+	git submodule update --init
+
+PRE_MAKE_ALL_RULE_HOOK: $(CHIBIOS_FILE) $(CHIBIOS_CONTRIB_FILE)
+
 .PHONY: CLEAN_RULE_HOOK CLEAN_PCH_HOOK CLEAN_BUNDLE_HOOK
 
 CLEAN_RULE_HOOK: CLEAN_PCH_HOOK CLEAN_BUNDLE_HOOK
