@@ -17,29 +17,35 @@ $(info Invoked "git submodule update --init")
 $(error Please run 'make' again. Please make sure you have 'git' command in PATH)
 endif
 
-ifeq ($(PROJECT_BOARD),)
-ifneq ($(SHORT_BOARD_NAME),)
-  PROJECT_BOARD = $(SHORT_BOARD_NAME)
-else
-  PROJECT_BOARD = f407-discovery
-endif
-endif
+include $(PROJECT_DIR)/rusefi_defaults.mk
 
-BOARDS_DIR = $(PROJECT_DIR)/config/boards
+BOARDINC_SAVE := $(BOARDINC)
 
-# allow passing a custom board dir, otherwise generate it based on the board name
-ifeq ($(BOARD_DIR),)
-	BOARD_DIR = $(BOARDS_DIR)/$(PROJECT_BOARD)
-	-include $(BOARD_DIR)/meta-info.env
+-include $(BOARD_DIR)/config.mk
+include $(BOARD_DIR)/board.mk
+
+BOARDINC_EXTRA := $(BOARDINC)
+BOARDINC_EXTRA += $(BOARD_DIR)
+
+BOARDINC := $(BOARDINC_SAVE)
+
+ifneq ($(META_OUTPUT_ROOT_FOLDER),)
+  BOARDINC_EXTRA += $(META_OUTPUT_ROOT_FOLDER)
 endif
 
 ifeq ($(PROJECT_CPU),)
+  $(info Setting PROJECT_CPU to default ARCH_STM32F4)
   # while building PROJECT_CPU is provided as 'make' command line argument value and we do not seem to be able to change that value
   # looks like 'make clean' is the only consumer of this value?!
   PROJECT_CPU = ARCH_STM32F4
 endif
 
--include $(BOARD_DIR)/config.mk
+ifeq (,$(filter clean,$(MAKECMDGOALS)))
+ifeq ($(SHORT_BOARD_NAME),)
+$(error SHORT_BOARD_NAME not set, something wrong with your meta-info.env file)
+endif
+endif
+DDEFS += -DSHORT_BOARD_NAME=$(SHORT_BOARD_NAME)
 
 PIN_NAMES_FILE=$(BOARD_DIR)/connectors/generated_ts_name_by_pin.cpp
 

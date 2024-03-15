@@ -14,7 +14,7 @@ PCHSUB = unit_tests
 
 include $(PROJECT_DIR)/rusefi_rules.mk
 
-BOARDS_DIR = $(PROJECT_DIR)/config/boards
+include $(PROJECT_DIR)/rusefi_defaults.mk
 
 # User may want to pass in a forced value for SANITIZE
 ifeq ($(SANITIZE),)
@@ -220,20 +220,6 @@ $(shell git submodule update --init)
 $(info Invoked "git submodule update --init")
 # make is not happy about newly checked out module for some reason but next invocation would work
 $(error Please run 'make' again. Please make sure you have 'git' command in PATH)
-endif
-
-ifeq ($(PROJECT_BOARD),)
-ifneq ($(SHORT_BOARD_NAME),)
-  PROJECT_BOARD = $(SHORT_BOARD_NAME)
-else
-  PROJECT_BOARD = f407-discovery
-endif
-endif
-
-# allow passing a custom board dir, otherwise generate it based on the board name
-ifeq ($(BOARD_DIR),)
-	BOARD_DIR = $(BOARDS_DIR)/$(PROJECT_BOARD)
-	-include $(BOARD_DIR)/meta-info.env
 endif
 
 include $(UNIT_TESTS_DIR)/rules.mk

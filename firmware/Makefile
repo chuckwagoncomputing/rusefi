@@ -191,8 +191,7 @@ MAKEFLAGS += ${NUMJOBS}
 #
 
 BOARD_DIR := ./$(BOARD_DIR)
-BOARDINC = $(BOARD_DIR)
-include $(BOARD_DIR)/board.mk
+
 BOARDCPPSRC += $(BOARDS_DIR)/board_id.cpp
 ifeq (,$(filter clean,$(MAKECMDGOALS)))
 ifeq ($(SHORT_BOARD_NAME),)
@@ -334,6 +333,7 @@ ASMXSRC = $(ALLXASMSRC) \
 INCDIR = \
   $(PCH_DIR) \
   $(BOARDINC) \
+  $(BOARDINC_EXTRA) \
   $(ALLINC) \
   $(TESTINC) \
   $(CHIBIOS)/os/various \

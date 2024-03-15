@@ -17,20 +17,11 @@ CHIBIOS = ../firmware/ChibiOS
 CHIBIOS_CONTRIB= ../firmware/ChibiOS-Contrib
 RULESPATH = $(CHIBIOS)/os/common/startup/SIMIA32/compilers/GCC
 
-PROJECT_CPU=simulator
+PROJECT_CPU = simulator
+PROJECT_DIR = ../firmware
 
-include ../firmware/rusefi_rules.mk
-
-BOARDS_DIR = $(PROJECT_DIR)/config/boards
-
-# Board-specific configuration
-ifeq (,$(filter clean,$(MAKECMDGOALS)))
-ifneq ($(BOARD_DIR),)
-  include ../firmware/$(BOARD_DIR)/board.mk
-endif
-endif
-
-include ../firmware/rusefi.mk
+include $(PROJECT_DIR)/rusefi_rules.mk
+include $(PROJECT_DIR)/rusefi.mk
 
 # Configure precompiled header
 PCH_DIR = $(PROJECT_DIR)/pch
@@ -139,7 +130,6 @@ ifeq ($(OS),Windows_NT)
 else
   PROJECT = rusefi_simulator
 endif
-PROJECT_DIR = ../firmware
 
 # Imported source files and paths
 
@@ -204,6 +194,7 @@ ASMSRC = $(PORTASM)
 INCDIR = . \
   $(PCH_DIR) \
   $(ALLINC) \
+  $(BOARDINC_EXTRA) \
   $(CHIBIOS)/os/various/cpp_wrappers \
   $(PROJECT_DIR)/hw_layer/drivers/can \
   ${CHIBIOS}/os/various \
@@ -270,7 +261,7 @@ CPPWARN = -Wall -Wextra -Wundef
 
 # List all user C define here, like -D_DEBUG=1
 UDEFS = -DSIMULATOR
-DDEFS += -DFIRMWARE_ID=\"simulator\" -DSHORT_BOARD_NAME=f407-discovery
+DDEFS += -DFIRMWARE_ID=\"simulator\"
 
 
 # Define ASM defines here
@@ -300,9 +291,6 @@ endif
 include $(RULESPATH)/rules.mk
 
 ifneq (yes,$(SUBMAKE))
-ifeq ($(SHORT_BOARD_NAME),)
-  SHORT_BOARD_NAME = f407-discovery
-endif
 include $(PROJECT_DIR)/rusefi_config.mk
 endif
 

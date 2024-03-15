@@ -113,14 +113,6 @@ endif
 # Project, sources and paths
 #
 
-ifeq ($(PROJECT_BOARD),)
-ifneq ($(SHORT_BOARD_NAME),)
-  PROJECT_BOARD = $(SHORT_BOARD_NAME)
-else
-  PROJECT_BOARD = f407-discovery
-endif
-endif
-
 # Define project name here
 PROJECT = openblt_$(PROJECT_BOARD)
 PROJECT_DIR = ..
@@ -162,16 +154,6 @@ include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
 include $(CHIBIOS)/os/various/cpp_wrappers/chcpp.mk
 # EX files (optional).
 include $(CHIBIOS)/os/hal/lib/streams/streams.mk
-
-BOARDINC = $(BOARD_DIR)
-include $(BOARD_DIR)/board.mk
-
-ifeq (,$(filter clean,$(MAKECMDGOALS)))
-ifeq ($(SHORT_BOARD_NAME),)
-$(error SHORT_BOARD_NAME not set, something wrong with your meta-info.env file)
-endif
-endif
-DDEFS += -DSHORT_BOARD_NAME=$(SHORT_BOARD_NAME)
 
 include $(PROJECT_DIR)/init/init.mk
 include $(PROJECT_DIR)/util/util.mk
@@ -243,6 +225,7 @@ INCDIR = $(ALLINC) \
 	$(PCH_DIR) \
 	.. \
 	$(BOARDINC) \
+	$(BOARDINC_EXTRA) \
 	$(CHIBIOS)/os/various \
 	$(CHIBIOS)/os/ex/ST \
 	$(CONFIG)/engines \
