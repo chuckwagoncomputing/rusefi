@@ -30,7 +30,7 @@ jobs:
             runs-on: hw-ci-proteus-f7
             test-suite: com.rusefi.HwCiProteus
             folder: config/boards/proteus
-            openocd-script: ../.github/workflows/openocd_ci_proteus_f7.cfg
+            openocd-script: .github/workflows/openocd_ci_proteus_f7.cfg
             serial-device: /dev/serial/by-id/usb-rusEFI_LLC_rusEFI_Engine_Management_ECU_38002D0005504B4634303120-if01
             # let's power Proteus from same DC adapter as Nuc PC
             vbatt_supply: 12
