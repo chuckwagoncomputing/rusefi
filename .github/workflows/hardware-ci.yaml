@@ -13,8 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         build-target: [f407-discovery,
-          #proteus F7 HW CI is not 100% reliable #6002          proteus_f7,
-          proteus_f4]
+          proteus_f7]
 
         include:
           - build-target: f407-discovery
