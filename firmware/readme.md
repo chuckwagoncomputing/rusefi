@@ -1,4 +1,4 @@
-End users should be able to use pre-built firmware. They should not need to build or modify the source code.
+fooEnd users should be able to use pre-built firmware. They should not need to build or modify the source code.
 See https://github.com/rusefi/rusefi/wiki/Download
 
 See also https://github.com/rusefi/rusefi/wiki/Dev-Quick-Start
