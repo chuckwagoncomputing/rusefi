@@ -42,6 +42,7 @@ echo "dirname: $(dirname $0)"
 FDIR=$(realpath $(dirname "$0"))
 echo "fdir: $FDIR"
 echo "rp: $(which realpath)"
+alias
 which grealpath && grealpath --version
 realpath --version
 BOARD_DIR=$(realpath --relative-to "$FDIR" "$BOARD_DIR")
