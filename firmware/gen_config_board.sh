@@ -33,8 +33,7 @@ echo "BOARD_DIR=${BOARD_DIR} SHORT_BOARD_NAME=${SHORT_BOARD_NAME}"
 
 if which grealpath >/dev/null 2>&1; then
   echo "found grealpath"
-  alias realpath='grealpath'
-  alias
+  realpath () { grealpath $@; }
 fi
 echo "shell: $SHELL"
 echo "path: $0"
@@ -42,7 +41,6 @@ echo "dirname: $(dirname $0)"
 FDIR=$(realpath $(dirname "$0"))
 echo "fdir: $FDIR"
 echo "rp: $(which realpath)"
-alias
 which grealpath && grealpath --version
 realpath --version
 BOARD_DIR=$(realpath --relative-to "$FDIR" "$BOARD_DIR")
