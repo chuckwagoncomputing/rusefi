@@ -123,7 +123,7 @@ $(SIMULATOR_EXE): $(CONFIG_FILES) .FORCE
 	$(MAKE) -C ../simulator -r OS="Windows_NT" SUBMAKE=yes
 
 # make Windows simulator a prerequisite so that we don't try compiling them concurrently
-../simulator/build/rusefi_simulator: $(CONFIG_FILES) .FORCE | $(SIMULATOR_EXE)
+../simulator/build/rusefi_simulator: $(CONFIG_FILES) .FORCE | $(filter $(SIMULATOR_EXE), $(MAKECMDGOALS))
 	$(MAKE) -C ../simulator -r OS="Linux" SUBMAKE=yes
 
 $(BOOTLOADER_HEX) $(BOOTLOADER_BIN): .bootloader-sentinel ;
