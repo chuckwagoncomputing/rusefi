@@ -20,6 +20,7 @@ jobs:
       uses: chuckwagoncomputing/interactive-pinout@interpolate
       with:
         mapping-path: firmware/config/boards/*/connectors/*.yaml
+        debug: "true"
         warnings: "false"
         warning-no-pins: "skip"
         warning-dupe: "error"
