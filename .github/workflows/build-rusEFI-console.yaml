@@ -38,8 +38,7 @@ jobs:
           ./gradlew jar :config_definition_base:shadowJar :enum_to_string:shadowJar
 
       - name: Generate Enums & Live Documentation
-        working-directory: ./firmware/
-        run: ./gen_live_documentation.sh
+        run: ./firmware/bin/compile.sh config/boards/nucleo_f767/meta-info.env config
 
       - name: Print GCC version
         run: gcc -v
