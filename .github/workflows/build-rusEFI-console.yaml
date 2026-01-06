@@ -33,6 +33,10 @@ jobs:
           sudo bash misc/actions/ubuntu-install-tools.sh
           sudo apt-get install xvfb
 
+        # ReadCurrentIniTest expects Nucleo F767 definition
+      - name: Generate Config
+        run: bash ./firmware/bin/compile.sh config/boards/nucleo_f767/meta-info.env config
+
       - name: Build All Java
         working-directory: .
         run: |

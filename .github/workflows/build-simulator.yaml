@@ -36,9 +36,8 @@ jobs:
         # using version 21 here just for fun. See build-tsplugin-body.yaml
         java-version: '17'
 
-    - name: Generate docs and enums
-      working-directory: ./firmware/
-      run: make docs-enums
+    - name: Generate Config
+      run: bash ./firmware/bin/compile.sh config/boards/f407-discovery/meta-info.env config
 
     - name: Gradle autotest java Using freshly generated java code
       working-directory: .
