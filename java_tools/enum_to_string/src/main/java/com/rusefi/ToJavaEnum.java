@@ -47,7 +47,12 @@ public class ToJavaEnum {
             String java = generate(sb.toString(), registry, e.getKey(), e.getValue());
 
             String fullFileName = outputPath + File.separator + e.getKey() + ".java";
-            BufferedWriter br = new BufferedWriter(new FileWriter(fullFileName));
+            File file = new File(fullFileName);
+
+            // create parent directories if needed
+            file.getParentFile().mkdirs();
+
+            BufferedWriter br = new BufferedWriter(new FileWriter(file));
             br.write(java);
             br.close();
         }
