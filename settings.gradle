@@ -63,6 +63,8 @@ include ':inifile'
 project(':inifile').projectDir = new File(rootRelativePath + 'java_console/inifile')
 include ':models'
 project(':models').projectDir = new File(rootRelativePath + 'java_console/models')
+include ':perf_trace_enum_generator'
+project(':perf_trace_enum_generator').projectDir = new File('java_tools/perf_trace_enum_generator')
 include ':autotest'
 project(':autotest').projectDir = new File(rootRelativePath + 'java_console/autotest')
 include ':ui'

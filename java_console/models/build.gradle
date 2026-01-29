@@ -5,6 +5,7 @@ dependencies {
     api project(':inifile')
     api project(':logging')
     api project(':shared_io')
+    api project(':perf_trace_enum_generator')
     api global_libs.snakeyaml
     api 'org.apache.commons:commons-math3:3.6.1'
 }
