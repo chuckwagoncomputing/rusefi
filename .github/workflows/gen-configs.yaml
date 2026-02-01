@@ -31,14 +31,8 @@ jobs:
         sudo bash misc/actions/add-ubuntu-latest-apt-mirrors.sh
         sudo apt-get install sshpass sshpass mtools
 
-    - name: Configuration Definition and Enum to String CI, without pushing new .jar
-      working-directory: .
-      run: |
-        ./gradlew jar :config_definition_base:shadowJar :enum_to_string:shadowJar
-
     - name: Generate Live Documentation
-      working-directory: ./firmware/
-      run: ./gen_live_documentation.sh
+      run: ./firmware/bin/compile.sh config/boards/f407-discovery/meta-info.env docs-enums
 
     - name: Generate All Configs
       working-directory: ./firmware/
