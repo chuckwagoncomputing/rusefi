@@ -54,7 +54,6 @@ jobs:
         .github/workflows/bin/smart-git-add.sh 'firmware/config/boards/*/generated_ts_name_by_pin.cpp'
         # misc live data etc. reference files TODO change extention since not really .ini?
         .github/workflows/bin/smart-git-add.sh 'firmware/console/binary/generated/*.ini' 4
-        .github/workflows/bin/smart-git-add.sh 'firmware/controllers/lua/generated/*.md'
         git status
         OUT=$(git commit -m "Auto-generated configs and docs" 2>&1) || echo "commit failed, finding out why"
         if echo "$OUT" | grep 'nothing to commit\|no changes added'; then
