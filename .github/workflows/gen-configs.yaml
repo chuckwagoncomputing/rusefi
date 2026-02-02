@@ -51,7 +51,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub gen-configs Action"
-        .github/workflows/bin/smart-git-add.sh 'firmware/config/boards/*/generated_ts_name_by_pin.cpp'
         git status
         OUT=$(git commit -m "Auto-generated configs and docs" 2>&1) || echo "commit failed, finding out why"
         if echo "$OUT" | grep 'nothing to commit\|no changes added'; then
