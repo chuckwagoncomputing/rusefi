@@ -46,25 +46,6 @@ jobs:
 #        git checkout -- ../java_console/models/src/main/java/com/rusefi/config/generated/Fields.java
 #        ./gen_config_default.sh
 
-    # Commit changes and catch the error that occurs if nothing has been changed (without catching other errors)
-    - name: Commit fresh generated headers and TS project
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub gen-configs Action"
-        git status
-        OUT=$(git commit -m "Auto-generated configs and docs" 2>&1) || echo "commit failed, finding out why"
-        if echo "$OUT" | grep 'nothing to commit\|no changes added'; then
-          echo "headers: looks like nothing to commit"
-          exit 0
-        elif echo "$OUT" | grep 'changed'; then
-          echo "COMMIT=true" >> $GITHUB_ENV
-          echo "headers: looks like something has changed"
-          exit 0
-        else
-          echo "headers: looks like something unexpected"
-          exit 1
-        fi
-
     - name: Print Compiler version
       # NOTE: on mac, this is actually symlink'd to clang, not gcc, but that's ok - we want to build on both
       working-directory: .
