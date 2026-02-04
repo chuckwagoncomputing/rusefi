@@ -365,19 +365,6 @@ public:
     void efiWatchdog();
     void onEngineHasStopped();
 
-    /**
-     * Needed by EFI_MAIN_RELAY_CONTROL to shut down the engine correctly.
-     * This method cancels shutdown if the ignition voltage is detected.
-     */
-    void checkShutdown();
-
-    /**
-     * Allows to finish some long-term shutdown procedures (stepper motor parking etc.)
-       Called when the ignition switch is turned off (vBatt is too low).
-       Returns true if some operations are in progress on background.
-     */
-    bool isInShutdownMode() const;
-
     void onSparkFireKnockSense(uint8_t cylinderIndex, efitick_t nowNt);
 
 #if EFI_UNIT_TEST
