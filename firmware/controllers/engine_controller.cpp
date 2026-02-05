@@ -52,7 +52,6 @@
 #include "launch_control.h"
 #include "speedometer.h"
 #include "gppwm.h"
-#include "date_stamp.h"
 #include "rusefi_lua.h"
 #include "buttonshift.h"
 #include "start_stop.h"

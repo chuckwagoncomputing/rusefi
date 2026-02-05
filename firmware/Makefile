@@ -207,6 +207,7 @@ $(error SHORT_BOARD_NAME not set, something wrong with your meta-info.env file)
 endif
 endif
 DDEFS += -DSHORT_BOARD_NAME=$(SHORT_BOARD_NAME)
+DDEFS += -DVCS_DATE=$(shell date "+%Y%m%d" -d "$(git show -s --format=%ci)")
 
 # Include various ChibiOS mk files
 # Licensing files.

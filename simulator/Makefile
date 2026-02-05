@@ -279,7 +279,7 @@ CPPWARN = -Wall -Wextra -Wundef
 # List all user C define here, like -D_DEBUG=1
 UDEFS = -DSIMULATOR
 DDEFS += -DFIRMWARE_ID=\"simulator\" -DSHORT_BOARD_NAME=$(SHORT_BOARD_NAME)
-
+DDEFS += -DVCS_DATE=$(shell date "+%Y%m%d" -d "$(git show -s --format=%ci)")
 
 # Define ASM defines here
 UADEFS =
