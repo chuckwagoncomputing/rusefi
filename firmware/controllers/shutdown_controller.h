@@ -18,6 +18,7 @@ enum class StopRequestedReason : uint8_t {
     Board2,
     Board3,
 
+		IgnitionVoltage,
 };
 
 void doScheduleStopEngine(StopRequestedReason reason);

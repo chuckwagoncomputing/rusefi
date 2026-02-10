@@ -2,6 +2,7 @@
 
 #include "main_relay.h"
 #include "ignition_controller.h"
+#include "shutdown_controller.h"
 
 void MainRelayController::onSlowCallback() {
 	hasIgnitionVoltage = isIgnVoltage();
@@ -13,14 +14,19 @@ void MainRelayController::onSlowCallback() {
 	if (hasIgnitionVoltage) {
 		delayedShutoffRequested = false;
 	} else {
-		// Query whether any engine modules want to keep the lights on
+	// Query whether any engine modules want to keep the lights on
 		delayedShutoffRequested = engine->engineModules.aggregate([](auto& m, bool prev) { return m.needsDelayedShutoff() | prev; }, false);
 	}
-	// TODO: delayed shutoff timeout?
 
 	mainRelayState = hasIgnitionVoltage | delayedShutoffRequested;
 
 	enginePins.mainRelay.setValue("mr", mainRelayState);
+}
+
+void MainRelayController::onIgnitionStateChanged(bool hasIgnitionVoltageNow) {
+	if (!hasIgnitionVoltageNow) {
+		doScheduleStopEngine(StopRequestedReason::IgnitionVoltage);
+	}
 }
 
 bool MainRelayController::needsDelayedShutoff() {

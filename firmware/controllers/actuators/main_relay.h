@@ -6,6 +6,7 @@
 class MainRelayController : public EngineModule, public main_relay_s {
 public:
 	void onSlowCallback() override;
+	void onIgnitionStateChanged(bool hasIgnitionVoltageNow) override;
 	bool needsDelayedShutoff() override;
 
 private:
