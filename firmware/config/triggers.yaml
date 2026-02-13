@@ -81,6 +81,7 @@
       angle: 331.9102
       width: 35.0031
 - name: TT_VVT_FORD_COYOTE
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -232,6 +233,7 @@
       times: 2
       every: 30
 - name: TT_VVT_MAZDA_SKYACTIV
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -318,6 +320,7 @@
       angle: 180
       width: 90
 - name: TT_VVT_TOYOTA_3_TOOTH
+  hidden: true
   syncEdge: RiseOnly
   isSynchronizationNeeded: false
   shapeWithoutTdc: true
@@ -469,6 +472,7 @@
       angle: 264
       width: 8
 - name: TT_2JZ_3_34_SIMULATION_ONLY
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Rise
   isSynchronizationNeeded: false
@@ -723,6 +727,7 @@
       times: 2
       every: 110
 - name: TT_MITSU_4G63_CAM
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Both
   syncGaps:
@@ -738,6 +743,7 @@
       angle: 180
       width: 45
 - name: TT_MAZDA_MIATA_VVT_TEST
+  hidden: true
   offset: 276
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Fall
@@ -927,6 +933,7 @@
       times: 2
       every: 45
 - name: TT_VVT_MIATA_NB
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1020,6 +1027,7 @@
     - channel: 0
       angle: 340
 - name: TT_VVT_BOSCH_QUICK_START
+  hidden: true
   humanName: Bosch Quick Start
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Fall
@@ -1128,6 +1136,7 @@
       times: 2
       every: 7.5
 - name: TT_NISSAN_MR18_CAM_VVT
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1153,6 +1162,7 @@
       times: 2
       every: 17
 - name: TT_TRI_TACH
+  hidden: true
   humanName: TriTach
   operationMode: FOUR_STROKE_CRANK_SENSOR
   syncEdge: RiseOnly
@@ -1338,6 +1348,7 @@
       angle: 227
       width: 3
 - name: TT_VVT_BARRA_3_PLUS_1
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1390,6 +1401,7 @@
     - channel: 0
       angle: 110
 - name: TT_VVT_NISSAN_VQ35
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1465,6 +1477,7 @@
     - channel: 0
       angle: 170
 - name: TT_VVT_MITSUBISHI_3A92
+  hidden: true
   operationMode: FOUR_STROKE_CRANK_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1657,6 +1670,7 @@
     - channel: 0
       angle: 0
 - name: TT_VVT_TOYOTA_4_1
+  hidden: true
   syncEdge: RiseOnly
   syncGaps:
     - from: 1.6
@@ -1770,6 +1784,7 @@
       angle: 0
       width: 60
 - name: TT_VVT_MITSUBISHI_4G69
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
@@ -1791,6 +1806,7 @@
       times: 2
       every: 90
 - name: TT_VVT_MITSU_6G72
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Both
   syncGaps:
@@ -1848,6 +1864,7 @@
       times: 3
       every: 90
 - name: TT_VVT_MAZDA_L
+  hidden: true
   operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
