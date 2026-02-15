@@ -144,8 +144,6 @@
       times: 4
       every: 90
 - name: TT_TOOTHED_WHEEL_60_2
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
     - from: 2.25
@@ -158,8 +156,6 @@
       times: 58
       every: 6
 - name: TT_TOOTHED_WHEEL_36_1
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
     - from: 1.5
@@ -191,8 +187,6 @@
       angle: 180
       width: 10
 - name: TT_NARROW_SINGLE_TOOTH
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   isSynchronizationNeeded: false
   useOnlyPrimaryForSync: true
@@ -310,8 +304,6 @@
       angle: 180
       width: 90
 - name: TT_VVT_TOYOTA_3_TOOTH
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   isSynchronizationNeeded: false
   shapeWithoutTdc: true
@@ -324,8 +316,6 @@
       times: 3
       every: 120
 - name: TT_HALF_MOON
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Rise
   isSynchronizationNeeded: false
   useOnlyPrimaryForSync: true
@@ -1012,8 +1002,6 @@
       angle: 290
       width: 70
 - name: TT_TOOTHED_WHEEL_36_2
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
     - from: 1.6
@@ -1542,8 +1530,6 @@
     - channel: 0
       angle: 170
 - name: TT_TOOTHED_WHEEL_32_2
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
     - from: 2.25
@@ -1611,8 +1597,6 @@
     - channel: 0
       angle: 0
 - name: TT_VVT_TOYOTA_4_1
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: RiseOnly
   syncGaps:
     - from: 1.6
@@ -1951,8 +1935,6 @@
       times: 7
       every: 15
 - name: TT_CUSTOM_1
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Rise
   isSynchronizationNeeded: false
   useOnlyPrimaryForSync: true
@@ -1964,8 +1946,6 @@
       angle: 0
       width: 180
 - name: TT_CUSTOM_2
-  knownOperationMode: false
-  operationMode: FOUR_STROKE_CAM_SENSOR
   syncEdge: Rise
   isSynchronizationNeeded: false
   useOnlyPrimaryForSync: true
