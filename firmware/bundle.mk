@@ -17,12 +17,7 @@ ifeq ($(UNAME_S),)
 	UNAME_S = $(shell uname -s)
 endif
 
-# *** KLUDGE ***: we do not include DFU files into bundle but we require DFU for checksum manipulations
-ifneq (,$(findstring NT,$(UNAME_S)))
-	H2D = ../misc/encedo_hex2dfu/hex2dfu.exe
-else
-	H2D = ../misc/encedo_hex2dfu/hex2dfu.bin
-endif
+H2D = ../misc/hex2dfu/hex2dfu
 
 # DFU and DBIN are uploaded as artifacts, so it's easier to have them in the deliver/ directory
 #  than to try uploading them from the rusefi.snapshot.<BUNDLE_NAME> directory
@@ -198,16 +193,19 @@ $(FIRMWARE_BIN_OUT) $(FOLDER)/$(PROJECT).dfu: $(FOLDER)/%: $(DELIVER)/% | $(FOLD
 HEX_BASE_ADDRESS = $(shell $(OD) -h -j .vectors $(BUILDDIR)/$(PROJECT).elf | awk '/.vectors/ {print $$5 }')
 CHECKSUM_ADDRESS = 0x$(shell echo "ibase=16; obase=10; ${HEX_BASE_ADDRESS} + 1C" | bc)
 
-$(BUILDDIR)/rusefi.srec: $(BUILDDIR)/$(PROJECT).hex
+$(H2D):
+	gcc ../misc/hex2dfu/hex2dfu.c -o ../misc/hex2dfu/hex2dfu
+
+$(BUILDDIR)/rusefi.srec: $(BUILDDIR)/$(PROJECT).hex $(H2D)
 	# make sure we create the srec from a binary with crc
-	$(H2D) -i $< -c $(CHECKSUM_ADDRESS) -b $(DBIN_CRC)
+	$(H2D) -i $< -c $(CHECKSUM_ADDRESS) -o $(DBIN_CRC)
 	$(CP) -I binary -O srec --change-addresses=0x$(HEX_BASE_ADDRESS) $(DBIN_CRC) $@
 
 # The DFU is currently not included in the bundle, so these prerequisites are listed as order-only to avoid building it.
 # If you want it, you can build it with `make rusefi.snapshot.$BUNDLE_NAME/rusefi.dfu`
 $(DFU) $(DBIN): .h2d-sentinel ;
 
-.h2d-sentinel: $(BUILDDIR)/$(PROJECT).hex $(BOOTLOADER_HEX_OUT) $(BINSRC) | $(DELIVER)
+.h2d-sentinel: $(BUILDDIR)/$(PROJECT).hex $(BOOTLOADER_HEX_OUT) $(BINSRC) $(H2D) | $(DELIVER)
 ifeq ($(USE_OPENBLT),yes)
 	$(H2D) -i $(BOOTLOADER_HEX) -i $(BUILDDIR)/$(PROJECT).hex -c $(CHECKSUM_ADDRESS) -o $(DFU) -b $(DBIN)
 	# TODO: handle .dfu file which is only used by Linux consumers!
