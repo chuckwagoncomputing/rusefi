@@ -76,7 +76,7 @@ static size_t findAllSyncSequences(trigger_type_e t, size_t maxLength, size_t st
 
 	TriggerWaveform form;
 	function(&form, triggerConfig);
-	toothOffset = (form.syncEdge == SyncEdge::Rise || form.syncEdge == SyncEdge::Both ? 0 : 1);
+	toothOffset = (form.syncEdge == SyncEdge::Fall || form.syncEdge == SyncEdge::Both ? 0 : 1);
 
 	operation_mode_e om = form.getWheelOperationMode();
 	float cycle = 720 / getCrankDivider(om);
