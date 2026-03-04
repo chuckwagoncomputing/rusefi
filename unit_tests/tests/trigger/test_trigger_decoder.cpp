@@ -118,11 +118,11 @@ TEST(misc, testGetCoilDutyCycleIssue977) {
 TEST(misc, testFordAspire) {
 	printf("*************************************************** testFordAspire\r\n");
 
-	ASSERT_EQ( 4,  getTriggerZeroEventIndex(engine_type_e::FORD_ASPIRE_1996)) << "getTriggerZeroEventIndex";
+	ASSERT_EQ( 9,  getTriggerZeroEventIndex(engine_type_e::FORD_ASPIRE_1996)) << "getTriggerZeroEventIndex";
 
 	EngineTestHelper eth(engine_type_e::FORD_ASPIRE_1996);
 
-	ASSERT_EQ( 4,  getTriggerCentral()->triggerShape.getTriggerWaveformSynchPointIndex()) << "getTriggerWaveformSynchPointIndex";
+	ASSERT_EQ( 9,  getTriggerCentral()->triggerShape.getTriggerWaveformSynchPointIndex()) << "getTriggerWaveformSynchPointIndex";
 
 	engineConfiguration->crankingTimingAngle = 31;
 
@@ -365,11 +365,11 @@ TEST(trigger, testTriggerDecoder) {
 	}
 
 	printf("====================================================================================== testTriggerDecoder part 2\r\n");
-	testTriggerDecoder2("Dodge Neon 1995", engine_type_e::DODGE_NEON_1995, 0, 0.4931, 0.2070);
+	testTriggerDecoder2("Dodge Neon 1995", engine_type_e::DODGE_NEON_1995, 15, 0.4931, 0.2070);
 
-	testTriggerDecoder2("ford aspire", engine_type_e::FORD_ASPIRE_1996, 4, 0.0000, 0.5);
+	testTriggerDecoder2("ford aspire", engine_type_e::FORD_ASPIRE_1996, 9, 0.0000, 0.5);
 
-	testTriggerDecoder2("dodge ram", engine_type_e::DODGE_RAM, 16, 0.5000, 0.06);
+	testTriggerDecoder2("dodge ram", engine_type_e::DODGE_RAM, 33, 0.5000, 0.06);
 
 	testTriggerDecoder2("Miata NB2", engine_type_e::MAZDA_MIATA_NB2, 3, 0.3888888955, 0);
 
@@ -378,16 +378,16 @@ TEST(trigger, testTriggerDecoder) {
 	testTriggerDecoder2("test 2/1 both", engine_type_e::TEST_ISSUE_366_BOTH, 0, 0.2500, 0.0);
 	testTriggerDecoder2("test 2/1 rise", engine_type_e::TEST_ISSUE_366_RISE, 0, 0.0000, 0.0);
 
-	testTriggerDecoder2("test engine", engine_type_e::TEST_ENGINE, 0, 0.7500, 0.2500);
+	testTriggerDecoder2("test engine", engine_type_e::TEST_ENGINE, 3, 0.7500, 0.2500);
 	testTriggerDecoder2("testGY6_139QMB", engine_type_e::GY6_139QMB, 0, 0.4375, 0.0);
 
-	testTriggerDecoderByTriggerType("testFordEscortGt", trigger_type_e::TT_MAZDA_DOHC_1_4, 0, 0.8096, 0.3844);
+	testTriggerDecoderByTriggerType("testFordEscortGt", trigger_type_e::TT_MAZDA_DOHC_1_4, 9, 0.8096, 0.3844);
 
-	testTriggerDecoderByTriggerType("NISSAN_PRIMERA", trigger_type_e::TT_NISSAN_SR20VE, 2, 0.9611, 0.0);
+	testTriggerDecoderByTriggerType("NISSAN_PRIMERA", trigger_type_e::TT_NISSAN_SR20VE, 7, 0.9611, 0.0);
 
-	testTriggerDecoder2("test1+1", engine_type_e::DEFAULT_FRANKENSO, 0, 0.7500, 0.2500);
+	testTriggerDecoder2("test1+1", engine_type_e::DEFAULT_FRANKENSO, 3, 0.7500, 0.2500);
 
-	testTriggerDecoder2("neon NGC4", engine_type_e::ET_DODGE_NEON_2003, 6, 0.5000, 0.0, CHRYSLER_NGC4_GAP);
+	testTriggerDecoder2("neon NGC4", engine_type_e::ET_DODGE_NEON_2003, 13, 0.5000, 0.0, 1);
 
 	{
 		EngineTestHelper eth(engine_type_e::ET_DODGE_NEON_2003);
@@ -401,7 +401,7 @@ TEST(trigger, testTriggerDecoder) {
 
 	testTriggerDecoder2("sachs", engine_type_e::SACHS, 0, 0.4800, 0.000);
 
-	testTriggerDecoder2("vw ABA", engine_type_e::VW_ABA, 0, 0.51666, 0.0);
+	testTriggerDecoder2("vw ABA", engine_type_e::VW_ABA, 115, 0.51666, 0.0);
 }
 
 static void assertInjectionEventBase(const char *msg, InjectionEvent *ev, int injectorIndex, int eventIndex, angle_t angleOffset) {
