@@ -10,7 +10,7 @@
 
 #if EFI_SHAFT_POSITION_INPUT
 static bool noFiringUntilVvtSync() {
-	auto operationMode = getEngineRotationState()->getOperationMode();
+	auto operationMode = getOperationMode();
 
 	if (engineConfiguration->isPhaseSyncRequiredForIgnition) {
 		// in rare cases engines do not like random sequential mode
