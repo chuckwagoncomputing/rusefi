@@ -39,7 +39,7 @@ jobs:
 
       - name: Generate Enums & Live Documentation
         working-directory: ./firmware/
-        run: ./gen_live_documentation.sh
+        run: bash bin/compile.sh config/boards/f407-discovery/meta-info.env docs-enums
 
       - name: Print GCC version
         run: gcc -v
