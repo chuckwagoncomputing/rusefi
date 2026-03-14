@@ -69,7 +69,7 @@ public class TriggerImage {
     private static void runAwt(String[] args) throws InterruptedException, InvocationTargetException {
         final String workingFolder;
         if (args.length < 1) {
-            workingFolder = TriggerWheelInfo.DEFAULT_WORK_FOLDER;
+            workingFolder = TriggerWheelInfo.DEFAULT_FILE;
         } else {
             workingFolder = args[0];
         }
