@@ -1,0 +1,2170 @@
+- name: TT_FORD_ASPIRE
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  isSecondWheelCam: true
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 26.38
+      times: 4
+      every: 90
+- name: TT_DODGE_NEON_1995
+  offset: 279
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.6
+      to: 4.5
+    - from: 0.5
+      to: 1.5
+    - from: 0.5
+      to: 1.5
+    - from: 0.1
+      to: 0.3
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 60
+    - channel: 0
+      angle: 75
+      width: 7
+    - channel: 0
+      angle: 96
+      width: 6
+      times: 2
+      every: 20
+    - channel: 0
+      angle: 235
+      width: 7
+    - channel: 0
+      angle: 255
+      width: 6
+      times: 3
+      every: 20
+- name: TT_MAZDA_MIATA_NA
+  offset: 5.18
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  isSecondWheelCam: true
+  syncEdge: Both
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.1
+      to: 0.5
+    - from: 0.5
+      to: 2.3
+  teeth:
+    - channel: 1
+      angle: 61.8142
+      width: 35.1843
+    - channel: 0
+      angle: 144.1079
+      width: 71.48225
+    - channel: 1
+      angle: 152.0292
+      width: 35.0108
+    - channel: 1
+      angle: 242.07035
+      width: 34.8378
+    - channel: 0
+      angle: 324.03865
+      width: 35.96135
+    - channel: 1
+      angle: 331.9102
+      width: 35.0031
+- name: TT_VVT_FORD_COYOTE
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.375
+      to: 0.625
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 45
+    - channel: 0
+      angle: 150
+      times: 2
+      every: 30
+    - channel: 0
+      angle: 240
+      times: 2
+      every: 30
+- name: TT_GM_7X
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 4.5
+      to: 7.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 5
+      every: 60
+    - channel: 0
+      angle: 290
+      times: 2
+      every: 10
+- name: TT_DAIHATSU_3_CYL
+  offset: 690
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.09375
+      to: 0.15625
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 105
+    - channel: 0
+      angle: 225
+      times: 2
+      every: 120
+- name: TT_MAZDA_SOHC_4
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Both
+  isSynchronizationNeeded: false
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 33.48
+      times: 4
+      every: 90
+- name: TT_TOOTHED_WHEEL_60_2
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 58
+      every: 6
+- name: TT_TOOTHED_WHEEL_36_1
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 35
+      every: 10
+- name: TT_MERCEDES_2_SEGMENT
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.0125
+      to: 1.6875
+    - from: 2.13
+      to: 3.55
+    - from: 0.195
+      to: 0.325
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 10
+      times: 2
+      every: 47
+    - channel: 0
+      angle: 180
+      width: 10
+- name: TT_NARROW_SINGLE_TOOTH
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+- name: TT_SUBARU_EZ30
+  offset: 240
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.25
+      to: 0.5
+    - from: 0.7
+      to: 1.5
+    - from: 2
+      to: 4
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 18
+      every: 10
+    - channel: 0
+      angle: 200
+      times: 10
+      every: 10
+    - channel: 0
+      angle: 320
+      times: 2
+      every: 30
+- name: TT_VVT_MAZDA_SKYACTIV
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.3225
+      to: 0.5375
+    - from: 0.585
+      to: 0.975
+    - from: 0.84
+      to: 1.4
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 60
+    - channel: 0
+      angle: 90
+      times: 2
+      every: 80
+    - channel: 0
+      angle: 260
+      times: 2
+      every: 70
+- name: TT_DODGE_NEON_2003_CAM
+  offset: 496
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 0.75
+      to: 1.5
+    - from: 0.65
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 72
+    - channel: 0
+      angle: 90
+      width: 18
+      times: 3
+      every: 36
+    - channel: 0
+      angle: 252
+      width: 18
+      times: 3
+      every: 36
+- name: TT_MAZDA_DOHC_1_4
+  offset: 137.12
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  isSecondWheelCam: true
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 7.43835
+      times: 2
+      every: 88.7508
+    - channel: 1
+      angle: 186.5303
+      times: 2
+      every: 91.1446
+- name: TT_ONE_PLUS_ONE
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  isSecondWheelCam: true
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 90
+    - channel: 1
+      angle: 180
+      width: 90
+- name: TT_VVT_TOYOTA_3_TOOTH
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 120
+- name: TT_HALF_MOON
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 180
+- name: TT_DODGE_RAM
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 180
+    - channel: 1
+      angle: 17.3
+      width: 2.7
+      times: 8
+      every: 45
+- name: TT_60_2_WRONG_POLARITY
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.6
+      to: 4
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 12
+    - channel: 0
+      angle: 18
+      times: 56
+      every: 6
+- name: TT_BENELLI_TRE
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 30
+    - channel: 0
+      angle: 45
+      times: 20
+      every: 15
+- name: TT_DODGE_STRATUS
+  offset: 150
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.25
+      to: 1.9
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 10
+    - channel: 0
+      angle: 60
+      times: 3
+      every: 10
+    - channel: 0
+      angle: 120
+      times: 2
+      every: 10
+    - channel: 0
+      angle: 180
+      times: 2
+      every: 60
+    - channel: 0
+      angle: 250
+      times: 2
+      every: 10
+    - channel: 0
+      angle: 300
+- name: TT_36_2_2_2
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.25
+      to: 0.5
+    - from: 0.7
+      to: 1.7
+    - from: 2.25
+      to: 4.2
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 12
+      every: 10
+    - channel: 0
+      angle: 140
+      times: 16
+      every: 10
+    - channel: 0
+      angle: 320
+      times: 2
+      every: 30
+- name: TT_NISSAN_SR20VE
+  offset: 630
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Both
+  syncGaps:
+    - from: 7.2525
+      to: 16
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 2
+      times: 3
+      every: 90
+    - channel: 0
+      angle: 264
+      width: 8
+- name: TT_2JZ_3_34_SIMULATION_ONLY
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 1
+      angle: 0
+      width: 5
+      times: 34
+      every: 10
+    - channel: 0
+      angle: 48
+      width: 1.5
+      times: 3
+      every: 120
+- name: TT_ROVER_K
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+    - from: 0.0001
+      to: 100000
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 14
+      every: 10
+    - channel: 0
+      angle: 150
+      times: 3
+      every: 10
+    - channel: 0
+      angle: 190
+      times: 13
+      every: 10
+    - channel: 0
+      angle: 330
+      times: 2
+      every: 10
+- name: TT_GM_24x_5
+  offset: 50
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+    - from: 0.375
+      to: 0.625
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 5
+      times: 5
+      every: 15
+    - channel: 0
+      angle: 70
+      width: 10
+      times: 5
+      every: 15
+    - channel: 0
+      angle: 150
+      width: 5
+    - channel: 0
+      angle: 160
+      width: 10
+      times: 3
+      every: 15
+    - channel: 0
+      angle: 210
+      width: 5
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 235
+      width: 10
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 270
+      width: 5
+      times: 3
+      every: 15
+    - channel: 0
+      angle: 310
+      width: 10
+    - channel: 0
+      angle: 330
+      width: 5
+    - channel: 0
+      angle: 340
+      width: 10
+- name: TT_HONDA_CBR_600
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 3.9
+      to: 8
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 150
+    - channel: 0
+      angle: 180
+- name: TT_NISSAN_K11
+  offset: 10
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 0.4
+      to: 0.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 5
+    - channel: 0
+      angle: 50
+      width: 35
+      times: 4
+      every: 90
+- name: TT_CHRYSLER_NGC_36_2_2
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.625
+      to: 4.375
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.3
+      to: 0.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 16
+      every: 10
+    - channel: 0
+      angle: 175
+      times: 16
+      every: 10
+- name: TT_3_1_CAM
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 170
+      times: 2
+      every: 120
+- name: TT_DODGE_NEON_2003_CRANK
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2
+      to: 4
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.5
+      to: 1.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 14
+      every: 10
+    - channel: 0
+      angle: 165
+      times: 17
+      every: 10
+- name: TT_MIATA_VVT
+  offset: 715
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.35
+      to: 1.15
+    - from: 0.8
+      to: 1.8
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 110
+- name: TT_MITSU_4G63_CAM
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Both
+  syncGaps:
+    - from: 2
+      to: 5
+    - from: 0.2
+      to: 0.95
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 90
+    - channel: 0
+      angle: 180
+      width: 45
+- name: TT_MAZDA_MIATA_VVT_TEST
+  offset: 276
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Fall
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.065
+      to: 0.17
+  teeth:
+    - channel: 1
+      angle: 4
+      width: 4
+      times: 2
+      every: 70
+    - channel: 0
+      angle: 160
+      width: 10
+      times: 2
+      every: 170
+    - channel: 1
+      angle: 184
+      width: 4
+      times: 2
+      every: 70
+    - channel: 0
+      angle: 350
+      width: 10
+- name: TT_SUBARU_7_6
+  offset: 520
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 4.8975
+      to: 15
+    - from: 0.3
+      to: 1.25
+    - from: 0.08
+      to: 0.3
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 90
+    - channel: 1
+      angle: 63
+      times: 2
+      every: 32
+    - channel: 0
+      angle: 97.5
+      times: 3
+      every: 82.5
+    - channel: 1
+      angle: 150
+      times: 2
+      every: 93
+    - channel: 0
+      angle: 270
+      times: 2
+      every: 7.5
+    - channel: 1
+      angle: 275
+      times: 2
+      every: 55
+- name: TT_JEEP_18_2_2_2
+  offset: 581
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 26
+      times: 4
+      every: 20
+    - channel: 1
+      angle: 146
+      times: 4
+      every: 20
+    - channel: 1
+      angle: 266
+      times: 4
+      every: 20
+- name: TT_12_TOOTH_CRANK
+  operationMode: FOUR_STROKE_TWELVE_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  useOnlyPrimaryForSync: true
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 0.2
+      to: 3.4
+    - from: 0.2
+      to: 3.4
+  teeth:
+    - channel: 0
+      angle: 0
+- name: TT_UNUSED_39
+  offset: 279
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.6
+      to: 4.5
+    - from: 0.5
+      to: 1.5
+    - from: 0.5
+      to: 1.5
+    - from: 0.1
+      to: 0.3
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 60
+    - channel: 0
+      angle: 75
+      width: 7
+    - channel: 0
+      angle: 96
+      width: 6
+      times: 2
+      every: 20
+    - channel: 0
+      angle: 235
+      width: 7
+    - channel: 0
+      angle: 255
+      width: 6
+      times: 3
+      every: 20
+- name: TT_JEEP_4_CYL
+  offset: 484
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 58
+      times: 4
+      every: 20
+    - channel: 1
+      angle: 238
+      times: 4
+      every: 20
+- name: TT_FIAT_IAW_P8
+  offset: 60
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 60
+    - channel: 0
+      angle: 90
+      width: 240
+- name: TT_FORD_ST170
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 90
+    - channel: 0
+      angle: 225
+      times: 2
+      every: 45
+- name: TT_VVT_MIATA_NB
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 6
+      to: 20
+    - from: 0.04
+      to: 0.2
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 159.5
+    - channel: 0
+      angle: 180
+- name: TT_RENIX_44_2_2
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.25
+      to: 2.25
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 12.2727
+    - channel: 0
+      angle: 20.4545
+      times: 5
+      every: 8.1816
+    - channel: 0
+      angle: 61.3636
+      times: 5
+      every: 8.1816
+    - channel: 0
+      angle: 102.2727
+      times: 5
+      every: 8.1816
+    - channel: 0
+      angle: 143.1818
+      times: 4
+      every: 8.1817
+- name: TT_RENIX_66_2_2_2
+  operationMode: FOUR_STROKE_THREE_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.25
+      to: 2.25
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 8.1818
+    - channel: 0
+      angle: 13.6364
+      times: 4
+      every: 5.4544
+    - channel: 0
+      angle: 35.4546
+      times: 5
+      every: 5.4549
+    - channel: 0
+      angle: 62.7273
+      times: 4
+      every: 5.4544
+    - channel: 0
+      angle: 84.5455
+      times: 5
+      every: 5.4549
+    - channel: 0
+      angle: 111.8182
+- name: TT_HONDA_K_CRANK_12_1
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.1
+      to: 2.4
+    - from: 0.2
+      to: 0.7
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 12
+      every: 30
+    - channel: 0
+      angle: 340
+- name: TT_VVT_BOSCH_QUICK_START
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Fall
+  syncGaps:
+    - from: 0.48375
+      to: 0.80625
+    - from: 1.167
+      to: 1.945
+  teeth:
+    - channel: 0
+      angle: 20
+      width: 20
+      times: 2
+      every: 90
+    - channel: 0
+      angle: 200
+      width: 70
+    - channel: 0
+      angle: 290
+      width: 70
+- name: TT_TOOTHED_WHEEL_36_2
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.6
+      to: 3.5
+    - from: 0.7
+      to: 1.3
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 34
+      every: 10
+- name: TT_SUBARU_SVX
+  offset: 690
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Fall
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 1
+      angle: 15
+      width: 5
+      times: 12
+      every: 30
+    - channel: 0
+      angle: 357.5
+      width: 2.5
+- name: TT_SUZUKI_K6A
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 3.3525
+      to: 5.5875
+    - from: 0.4875
+      to: 0.8125
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 43
+      times: 2
+      every: 82
+    - channel: 0
+      angle: 135
+      times: 2
+      every: 28
+    - channel: 0
+      angle: 240
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 278
+      times: 2
+      every: 15
+- name: TT_VVT_SUBARU_7_WITHOUT_6
+  offset: 340
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 4.8975
+      to: 15
+    - from: 0.3
+      to: 1.25
+    - from: 0.08
+      to: 0.3
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 90
+    - channel: 0
+      angle: 97.5
+      times: 3
+      every: 82.5
+    - channel: 0
+      angle: 270
+      times: 2
+      every: 7.5
+- name: TT_NISSAN_MR18_CAM_VVT
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 3.8
+      to: 5
+    - from: 0.3
+      to: 0.55
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 90
+    - channel: 0
+      angle: 107
+      times: 2
+      every: 17
+    - channel: 0
+      angle: 180
+      times: 4
+      every: 17
+    - channel: 0
+      angle: 270
+      times: 2
+      every: 17
+- name: TT_TRI_TACH
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 0.05
+      times: 2
+      every: 2.6167
+    - channel: 1
+      angle: 5.3333
+      times: 4
+      every: 2.6666
+    - channel: 1
+      angle: 16
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 26.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 40
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 50.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 64
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 74.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 88
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 98.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 112
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 122.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 136
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 146.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 160
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 170.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 184
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 194.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 208
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 218.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 232
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 242.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 256
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 266.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 280
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 290.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 304
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 314.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 328
+      times: 4
+      every: 2.6668
+    - channel: 1
+      angle: 338.6667
+      times: 5
+      every: 2.6668
+    - channel: 1
+      angle: 352
+      times: 3
+      every: 2.6666
+- name: TT_GM_60_2_2_2
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  isSecondWheelCam: true
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+    - channel: 1
+      angle: 1
+      times: 13
+      every: 6
+    - channel: 1
+      angle: 91
+      times: 18
+      every: 6
+    - channel: 1
+      angle: 211
+      times: 18
+      every: 6
+    - channel: 1
+      angle: 331
+      times: 5
+      every: 6
+- name: TT_SKODA_FAVORIT
+  offset: 227
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 2
+      to: 4
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 47
+    - channel: 0
+      angle: 180
+      width: 44
+    - channel: 0
+      angle: 227
+      width: 3
+- name: TT_VVT_BARRA_3_PLUS_1
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.6
+      to: 2.4
+    - from: 0.8
+      to: 1.2
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 120
+    - channel: 0
+      angle: 180
+      times: 2
+      every: 60
+- name: TT_KAWA_KX450F
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.71
+      to: 2.85
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 3
+      times: 17
+      every: 20
+    - channel: 0
+      angle: 332.2
+      width: 10.8
+- name: TT_NISSAN_VQ35
+  offset: 675
+  operationMode: FOUR_STROKE_THREE_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.2
+      to: 0.5
+    - from: 2
+      to: 4
+    - from: 0.6
+      to: 1.4
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 9
+      every: 10
+    - channel: 0
+      angle: 110
+- name: TT_VVT_NISSAN_VQ35
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 4
+      to: 6
+    - from: 0.35
+      to: 0.7
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 120
+    - channel: 0
+      angle: 180
+      times: 2
+      every: 20
+    - channel: 0
+      angle: 240
+      times: 2
+      every: 20
+- name: TT_NISSAN_VQ30
+  offset: 120
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 4.335
+      to: 7.225
+    - from: 0.285
+      to: 0.475
+    - from: 2.0025
+      to: 3.3375
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 9
+    - channel: 0
+      angle: 63
+      times: 6
+      every: 9
+    - channel: 0
+      angle: 124
+      times: 2
+      every: 57
+    - channel: 0
+      angle: 190
+      times: 3
+      every: 9
+    - channel: 0
+      angle: 239
+      times: 5
+      every: 9
+    - channel: 0
+      angle: 299
+      times: 2
+      every: 9
+- name: TT_NISSAN_QR25
+  offset: 585
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.2475
+      to: 0.4125
+    - from: 2.25
+      to: 3.75
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 15
+      every: 10
+    - channel: 0
+      angle: 170
+- name: TT_VVT_MITSUBISHI_3A92
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 6.75
+      to: 11.25
+    - from: 0.0825
+      to: 0.1375
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 120
+    - channel: 0
+      angle: 252
+- name: TT_SUBARU_SVX_CRANK_1
+  offset: 690
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Fall
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 1
+      angle: 15
+      width: 5
+      times: 12
+      every: 30
+    - channel: 0
+      angle: 357.5
+      width: 2.5
+- name: TT_SUBARU_SVX_CAM_VVT
+  offset: 690
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Fall
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 1
+      angle: 15
+      width: 5
+      times: 12
+      every: 30
+    - channel: 0
+      angle: 357.5
+      width: 2.5
+- name: TT_FORD_TFI_PIP
+  offset: 662.5
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 0.495
+      to: 0.825
+    - from: 0.9375
+      to: 1.5625
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 22.5
+      times: 7
+      every: 45
+    - channel: 0
+      angle: 326.25
+      width: 11.25
+- name: TT_SUZUKI_G13B
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.165
+      to: 0.275
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 70
+    - channel: 0
+      angle: 160
+      times: 3
+      every: 90
+- name: TT_HONDA_K_CAM_4_1
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.5
+      to: 4.5
+    - from: 0.1
+      to: 0.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 4
+      every: 90
+    - channel: 0
+      angle: 297.5
+- name: TT_NISSAN_MR18_CRANK
+  offset: 80
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.2475
+      to: 0.4125
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 15
+      every: 10
+    - channel: 0
+      angle: 170
+- name: TT_TOOTHED_WHEEL_32_2
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 30
+      every: 11.25
+- name: TT_36_2_1
+  offset: 90
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 17
+      every: 10
+    - channel: 0
+      angle: 180
+      times: 16
+      every: 10
+- name: TT_36_2_1_1
+  offset: 90
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 11
+      every: 10
+    - channel: 0
+      angle: 120
+      times: 11
+      every: 10
+    - channel: 0
+      angle: 240
+      times: 10
+      every: 10
+- name: TT_3_TOOTH_CRANK
+  operationMode: FOUR_STROKE_THREE_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  useOnlyPrimaryForSync: true
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 0.5
+      to: 1.4
+    - from: 0.5
+      to: 1.4
+  teeth:
+    - channel: 0
+      angle: 0
+- name: TT_VVT_TOYOTA_4_1
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.6
+      to: 2.4
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 90
+- name: TT_GM_24x_3
+  offset: 48
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  syncGaps:
+    - from: 3
+      to: 5
+    - from: 0.1875
+      to: 0.3125
+    - from: 3
+      to: 5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 3
+      times: 5
+      every: 15
+    - channel: 0
+      angle: 66
+      width: 12
+      times: 5
+      every: 15
+    - channel: 0
+      angle: 150
+      width: 3
+    - channel: 0
+      angle: 156
+      width: 12
+      times: 3
+      every: 15
+    - channel: 0
+      angle: 210
+      width: 3
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 231
+      width: 12
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 270
+      width: 3
+      times: 3
+      every: 15
+    - channel: 0
+      angle: 306
+      width: 12
+    - channel: 0
+      angle: 330
+      width: 3
+    - channel: 0
+      angle: 336
+      width: 12
+- name: TT_60_2_2_F3R
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.375
+      to: 0.625
+    - from: 0.75
+      to: 1.25
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 56
+      every: 6
+    - channel: 0
+      angle: 342
+      times: 2
+      every: 12
+- name: TT_MITSU_4G63_CRANK
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+- name: TT_60DEG_TOOTH
+  offset: 60
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 60
+- name: TT_VVT_MITSUBISHI_4G69
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+    - from: 3.375
+      to: 5.625
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 70
+    - channel: 0
+      angle: 90
+      times: 2
+      every: 70
+    - channel: 0
+      angle: 180
+      times: 2
+      every: 90
+- name: TT_VVT_MITSU_6G72
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Both
+  syncGaps:
+    - from: 1.3
+      to: 3.2
+    - from: 0.3
+      to: 0.66
+    - from: 1.3
+      to: 3.2
+    - from: 0.3
+      to: 0.66
+    - from: 1.3
+      to: 3.2
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 52.5
+    - channel: 0
+      angle: 82.5
+      width: 30
+      times: 2
+      every: 95
+    - channel: 0
+      angle: 262.5
+      width: 30
+- name: TT_6_TOOTH_CRANK
+  operationMode: FOUR_STROKE_SIX_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  useOnlyPrimaryForSync: true
+  shapeWithoutTdc: true
+  syncGaps:
+    - from: 0.7
+      to: 1.4
+    - from: 0.7
+      to: 1.4
+  teeth:
+    - channel: 0
+      angle: 0
+- name: TT_DAIHATSU_4_CYL
+  offset: 690
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.1275
+      to: 0.2125
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 75
+    - channel: 0
+      angle: 165
+      times: 3
+      every: 90
+- name: TT_VVT_MAZDA_L
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.32
+      to: 0.8
+    - from: 1.5
+      to: 2.5
+    - from: 0.32
+      to: 0.8
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 90
+    - channel: 0
+      angle: 240
+      times: 2
+      every: 30
+    - channel: 0
+      angle: 330
+- name: TT_DEV
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 2.25
+      to: 3.75
+    - from: 0.375
+      to: 0.625
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 3
+      every: 45
+    - channel: 0
+      angle: 150
+      times: 2
+      every: 30
+    - channel: 0
+      angle: 240
+      times: 2
+      every: 30
+- name: TT_NISSAN_HR
+  offset: 515
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.7
+      to: 5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.6
+      to: 1.5
+    - from: 0.1
+      to: 0.5
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 22
+      every: 10
+    - channel: 0
+      angle: 240
+      times: 10
+      every: 10
+- name: TT_ARCTIC_CAT
+  operationMode: TWO_STROKE
+  syncEdge: Rise
+  syncGaps:
+    - from: 1.5
+      to: 2.5
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 7.5
+      times: 10
+      every: 15
+    - channel: 0
+      angle: 180
+      width: 7.5
+      times: 11
+      every: 15
+- name: TT_NISSAN_HR_CAM_IN
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.1
+      to: 0.3
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 98
+    - channel: 0
+      angle: 218
+      times: 2
+      every: 120
+- name: TT_HONDA_J30A2_24_1_1
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.6
+      to: 4
+    - from: 0.65
+      to: 1.4
+    - from: 0.65
+      to: 1.4
+    - from: 0.65
+      to: 1.4
+    - from: 0.65
+      to: 1.4
+    - from: 0.65
+      to: 1.4
+    - from: 0.2
+      to: 0.55
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 15
+      every: 15
+    - channel: 0
+      angle: 240
+      times: 7
+      every: 15
+- name: TT_CUSTOM_1
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 180
+- name: TT_CUSTOM_2
+  knownOperationMode: false
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: Rise
+  isSynchronizationNeeded: false
+  useOnlyPrimaryForSync: true
+  syncGaps:
+    - from: 0.75
+      to: 1.25
+  teeth:
+    - channel: 0
+      angle: 0
+      width: 180
+- name: TT_CHRYSLER_PHASER
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.62
+      to: 2.7
+    - from: 1.56
+      to: 2.6
+    - from: 0.255
+      to: 0.425
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 11
+    - channel: 0
+      angle: 21
+      times: 2
+      every: 23
+    - channel: 0
+      angle: 90
+      times: 2
+      every: 42
+    - channel: 0
+      angle: 142
+      times: 2
+      every: 34
+    - channel: 0
+      angle: 188
+      times: 2
+      every: 12
+    - channel: 0
+      angle: 224
+      times: 2
+      every: 10
+    - channel: 0
+      angle: 269
+      times: 2
+      every: 12
+    - channel: 0
+      angle: 306
+- name: TT_TOYOTA_3_TOOTH_UZ
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.125
+      to: 1.875
+    - from: 0.5025
+      to: 0.8375
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 135
+    - channel: 0
+      angle: 225
+- name: TT_JEEP_EVD_36_2_2
+  offset: 135
+  operationMode: FOUR_STROKE_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.2
+      to: 0.6
+    - from: 2.2
+      to: 3.8
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+    - from: 0.7
+      to: 1.6
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 14
+      every: 10
+    - channel: 0
+      angle: 160
+      times: 17
+      every: 10
+    - channel: 0
+      angle: 350
+- name: TT_JEEPRENIX_66_2_2_2
+  operationMode: FOUR_STROKE_THREE_TIMES_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.2
+      to: 0.5
+    - from: 2
+      to: 4
+    - from: 0.6
+      to: 1.4
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 4
+      every: 5.4544
+    - channel: 0
+      angle: 21.8182
+      times: 4
+      every: 5.4544
+    - channel: 0
+      angle: 43.6364
+      times: 5
+      every: 5.4543
+    - channel: 0
+      angle: 70.9091
+      times: 5
+      every: 5.4549
+    - channel: 0
+      angle: 98.1818
+      times: 2
+      every: 16.3637
+- name: TT_SUBARU_7_6_CRANK
+  offset: 65
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.172
+      to: 0.688
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 55
+    - channel: 0
+      angle: 148
+- name: TT_SUZUKI_G16B
+  operationMode: FOUR_STROKE_CAM_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 1.1775
+      to: 1.9625
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 35
+    - channel: 0
+      angle: 75
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 125
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 180
+      times: 2
+      every: 35
+    - channel: 0
+      angle: 255
+      times: 2
+      every: 15
+    - channel: 0
+      angle: 305
+- name: TT_UNUSED_96
+  offset: 65
+  operationMode: FOUR_STROKE_SYMMETRICAL_CRANK_SENSOR
+  syncEdge: RiseOnly
+  syncGaps:
+    - from: 0.172
+      to: 0.688
+  teeth:
+    - channel: 0
+      angle: 0
+      times: 2
+      every: 55
+    - channel: 0
+      angle: 148
